@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04ea07f5-d325-4ca5-9d86-cdad38921776" name="更改" comment="第一次提交" />
+    <list default="true" id="04ea07f5-d325-4ca5-9d86-cdad38921776" name="更改" comment="第一次提交">
+      <change afterPath="$PROJECT_DIR$/test" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,6 +58,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/m1980/Desktop/buct-kaggle/data_model",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -179,6 +182,7 @@
       <workItem from="1728531794065" duration="938000" />
       <workItem from="1728532751114" duration="143000" />
       <workItem from="1728533016027" duration="322000" />
+      <workItem from="1728544767918" duration="592000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <option name="closed" value="true" />
