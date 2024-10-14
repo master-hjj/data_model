@@ -4,43 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04ea07f5-d325-4ca5-9d86-cdad38921776" name="更改" comment="删除不必要的项目日志">
-      <change afterPath="$PROJECT_DIR$/601/sql/organization.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/601/sql/role.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/601/sydata_sql/appparams.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/601/sydata_sql/datasets.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/601/sydata_sql/model_application.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/601/sydata_sql/netcat.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/601/sydata_sql/network.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/601/sydata_sql/preprocess_method.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/601/sydata_sql/preprocessed_dataset.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/601/sydata_sql/rankings.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/601/sydata_sql/syonline.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/601/sydata_sql/syorganization.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/601/sydata_sql/syorganization_syresource.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/601/sydata_sql/syresource.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/601/sydata_sql/syresourcetype.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/601/sydata_sql/syrole.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/601/sydata_sql/syrole_syorganization.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/601/sydata_sql/syrole_syresource.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/601/sydata_sql/sys_config.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/601/sydata_sql/sys_dict_data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/601/sydata_sql/sys_dict_type.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/601/sydata_sql/syuser.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/601/sydata_sql/syuser_syorganization.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/601/sydata_sql/syuser_syrole.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/601/sydata_sql/testdata.sql" afterDir="false" />
+    <list default="true" id="04ea07f5-d325-4ca5-9d86-cdad38921776" name="更改" comment="修改了数据库初始化方式，采用了分离版本，这样更清晰更方便改动，位置在sydata_sql里面，这是给开发者的，后面我出一个整体的给使用者">
+      <change afterPath="$PROJECT_DIR$/601/app/decorators/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/601/app/decorators/admin_required.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/601/sydata_sql/syrole_syresource_test.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/543a8fee-76e4-4ed5-8907-cabf4fd085a7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/543a8fee-76e4-4ed5-8907-cabf4fd085a7.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/543a8fee-76e4-4ed5-8907-cabf4fd085a7/storage_v2/_src_/schema/data_model.VGYzYA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/543a8fee-76e4-4ed5-8907-cabf4fd085a7/storage_v2/_src_/schema/data_model.VGYzYA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/601/app/models/Preprocess.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/601/app/models/Resource.py" beforeDir="false" afterPath="$PROJECT_DIR$/601/app/models/Resource.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/601/app/routes/preprocess_upload.py" beforeDir="false" afterPath="$PROJECT_DIR$/601/app/routes/preprocess_upload.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/601/app/routes/role.py" beforeDir="false" afterPath="$PROJECT_DIR$/601/app/routes/role.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/601/app/routes/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/601/app/routes/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/601/migrations/versions/bb191ea484b1_initial_migration.py" beforeDir="false" afterPath="$PROJECT_DIR$/601/migrations/versions/d8f6d7ede193_initial_migration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/601/sql/config.sql" beforeDir="false" afterPath="$PROJECT_DIR$/601/sql/config.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/601/sql/user.sql" beforeDir="false" afterPath="$PROJECT_DIR$/601/sql/user.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,12 +96,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.start">
-    <configuration name="appparams.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/601/sydata_sql/appparams.sql" />
-      <script-mode>FILE</script-mode>
-      <data-source id="543a8fee-76e4-4ed5-8907-cabf4fd085a7" />
-      <method v="2" />
-    </configuration>
     <configuration name="authbase.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/601/authbase.sql" />
       <script-mode>FILE</script-mode>
@@ -161,6 +126,12 @@
       <data-source id="543a8fee-76e4-4ed5-8907-cabf4fd085a7" namespace="schema/&quot;data_model&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="syrole_syresource_test.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/601/sydata_sql/syrole_syresource_test.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="543a8fee-76e4-4ed5-8907-cabf4fd085a7" />
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="data_model" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -186,10 +157,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.start" />
+        <item itemvalue="数据库脚本.syrole_syresource_test.sql" />
         <item itemvalue="数据库脚本.syrole_syresource.sql" />
         <item itemvalue="数据库脚本.syresource.sql" />
         <item itemvalue="数据库脚本.rankings.sql" />
-        <item itemvalue="数据库脚本.appparams.sql" />
       </list>
     </recent_temporary>
   </component>
@@ -245,7 +216,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728869811613</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="修改了数据库初始化方式，采用了分离版本，这样更清晰更方便改动，位置在sydata_sql里面，这是给开发者的，后面我出一个整体的给使用者">
+      <option name="closed" value="true" />
+      <created>1728882009140</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1728882009140</updated>
+    </task>
+    <task id="LOCAL-00006" summary="修改了数据库初始化方式，采用了分离版本，这样更清晰更方便改动，位置在sydata_sql里面，这是给开发者的，后面我出一个整体的给使用者">
+      <option name="closed" value="true" />
+      <created>1728882144565</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728882144565</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,12 +246,13 @@
     <MESSAGE value="第一次提交" />
     <MESSAGE value="后端数据库的创建表和相应初始数据填充" />
     <MESSAGE value="删除不必要的项目日志" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除不必要的项目日志" />
+    <MESSAGE value="修改了数据库初始化方式，采用了分离版本，这样更清晰更方便改动，位置在sydata_sql里面，这是给开发者的，后面我出一个整体的给使用者" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了数据库初始化方式，采用了分离版本，这样更清晰更方便改动，位置在sydata_sql里面，这是给开发者的，后面我出一个整体的给使用者" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/data_model$test1.coverage" NAME="test1 覆盖结果" MODIFIED="1720576850790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/601/app/models" />
     <SUITE FILE_PATH="coverage/data_model$TrainModel.coverage" NAME="TrainModel 覆盖结果" MODIFIED="1720509425686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/601" />
-    <SUITE FILE_PATH="coverage/data_model$start.coverage" NAME="start 覆盖结果" MODIFIED="1728877731411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/601" />
+    <SUITE FILE_PATH="coverage/data_model$start.coverage" NAME="start 覆盖结果" MODIFIED="1728892933896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/601" />
     <SUITE FILE_PATH="coverage/data_model$run.coverage" NAME="run 覆盖结果" MODIFIED="1720509543565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/601" />
     <SUITE FILE_PATH="coverage/data_model$dl.coverage" NAME="dl 覆盖结果" MODIFIED="1720598679477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/601" />
     <SUITE FILE_PATH="coverage/data_model$db_migrate.coverage" NAME="db_migrate 覆盖结果" MODIFIED="1728875448030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/601" />

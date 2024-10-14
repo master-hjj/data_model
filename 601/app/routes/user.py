@@ -1,5 +1,6 @@
 # coding:utf-8
 from ..base import base
+from ..decorators.admin_required import admin_required
 from ..models import User, Organization, Role, OnLine
 from flask import render_template, request
 from flask import g, jsonify
@@ -33,6 +34,7 @@ def grant_user_organization():
 
 @base.route('/system/user/authRole', methods=['PUT'])
 @login_required
+@admin_required
 def grant_user_role():
     id = request.args['userId']
     ids = request.args['roleIds']
@@ -68,9 +70,7 @@ def do_logout():
 @base.route('/login', methods=['POST'])
 def do_login():
     #检查用户名是否存在
-    print(request.form)
     user = User.query.filter_by(LOGINNAME=request.json['username']).first()
-    print(user.NAME)
     if user is not None:
         md = hashlib.md5()
         #提交的密码MD5加密
