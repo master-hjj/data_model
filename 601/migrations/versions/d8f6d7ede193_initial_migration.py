@@ -1,8 +1,8 @@
 """Initial migration
 
-Revision ID: bb191ea484b1
+Revision ID: d8f6d7ede193
 Revises: 
-Create Date: 2024-08-30 17:36:33.268655
+Create Date: 2024-10-14 11:10:52.754359
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'bb191ea484b1'
+revision = 'd8f6d7ede193'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -161,10 +161,10 @@ def upgrade():
     sa.Column('PATH', sa.String(length=200), nullable=True),
     sa.Column('URL', sa.String(length=200), nullable=True),
     sa.Column('PERMS', sa.String(length=150), nullable=True),
-    sa.Column('SYRESOURCE_ID', sa.String(length=32), nullable=True),
-    sa.Column('SYRESOURCETYPE_ID', sa.String(length=32), nullable=True),
+    sa.Column('SYRESOURCE_ID', sa.String(length=36), nullable=True),
+    sa.Column('SYRESOURCETYPE_ID', sa.String(length=36), nullable=True),
     sa.Column('STATUS', sa.String(length=10), nullable=True),
-    sa.Column('IS_CACHE', sa.String(length=10), nullable=True),
+    sa.Column('IS_CACHE', sa.Boolean(), nullable=True),
     sa.ForeignKeyConstraint(['SYRESOURCETYPE_ID'], ['SYRESOURCETYPE.ID'], ),
     sa.ForeignKeyConstraint(['SYRESOURCE_ID'], ['SYRESOURCE.ID'], ),
     sa.PrimaryKeyConstraint('ID')

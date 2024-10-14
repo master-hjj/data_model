@@ -7,7 +7,7 @@ from werkzeug.utils import secure_filename
 from wtforms import StringField
 
 from config import minio_config
-from ..models import Preprocess,Network
+from ..models import Network
 import os
 # import sqlalchemy as sa
 from .form import UpDatasetForm, UpNetworkForm, UpModelappForm

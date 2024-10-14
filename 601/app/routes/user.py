@@ -91,8 +91,8 @@ def user_grid():
     if 'phonenumber' in request.args:
         filters.append(User.PHONENUMBER.like('%' + request.args['phonenumber'] + '%'))
     if 'params[beginTime]' in request.args and 'params[endTime]' in request.args:
-        filters.append(User.CREATEDATETIME >  request.args['params[beginTime]'])
-        filters.append(User.CREATEDATETIME <  request.args['params[endTime]'])
+        filters.append(User.CREATEDATETIME > request.args['params[beginTime]'])
+        filters.append(User.CREATEDATETIME < request.args['params[endTime]'])
 
     order_by = []
     if request.form.get('sort'):

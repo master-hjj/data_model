@@ -62,6 +62,7 @@ def cancel_role():
 @login_required
 def grid():
     filters = []
+
     if request.args.get('roleName'):
         filters.append(Role.NAME.like('%' + request.args.get('roleName') + '%'))
 
@@ -76,7 +77,7 @@ def grid():
 
     page = request.args.get('pageNum', 1, type=int)
     rows = request.args.get('pageSize', 10, type=int)
-    pagination = current_user.roles.filter(*filters).order_by(*order_by).paginate(
+    pagination = Role.query.filter(*filters).order_by(*order_by).paginate(
         page=page, per_page=rows, error_out=False)
     roles = pagination.items
 

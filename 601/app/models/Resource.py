@@ -23,8 +23,10 @@ class Resource(db.Model, UserMixin):
     SYRESOURCE_ID = db.Column(db.String(36), db.ForeignKey('SYRESOURCE.ID'))
     SYRESOURCETYPE_ID = db.Column(db.String(36), db.ForeignKey('SYRESOURCETYPE.ID'))
     STATUS = db.Column(db.String(10))
+    IS_CACHE = db.Column(db.Boolean, default=True)
     parent = db.relationship('Resource', remote_side=[ID], backref='resource', uselist=False)
     children = db.relationship('Resource')
+
 
 
     def get_id(self):
