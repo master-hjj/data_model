@@ -87,7 +87,7 @@ class ModelApp(db.Model):
                 eva = None
 
         return {'id': self.id, 'model_name': self.model_name, 'model_description': self.model_description,
-                'network': self.network.name, 'dataset': self.test_data.name, 'params': eval(self.params), 'process': process,
+                'network_id': self.network_id, 'data_id': self.data_id, 'params': eval(self.params), 'process': process,
                 'status': self.status, 'percentage': percentage, 'imagePath': imagePath,
                 'modelPath': modelPath, 'created_username': self.created_username, 'testImagePath': testImagePath, 'eva': eva}
 

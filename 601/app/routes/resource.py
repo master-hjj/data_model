@@ -7,7 +7,7 @@ from flask_login import current_user
 import json
 from ..models import ResourceType
 from flask import render_template, request
-from .. import  db
+from .. import db
 import uuid
 from datetime import datetime
 from sqlalchemy import desc

@@ -74,6 +74,7 @@ class Resource(db.Model, UserMixin):
             'meta': {
                 'title': self.NAME,
                 'icon': self.ICONCLS,
+                'roles': [r.NAME for r in self.roles],
                 'noCache': False,
                 'link': ''
             },
