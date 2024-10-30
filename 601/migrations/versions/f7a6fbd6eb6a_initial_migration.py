@@ -1,8 +1,8 @@
 """Initial migration
 
-Revision ID: d8f6d7ede193
+Revision ID: f7a6fbd6eb6a
 Revises: 
-Create Date: 2024-10-14 11:10:52.754359
+Create Date: 2024-10-30 20:08:15.478084
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'd8f6d7ede193'
+revision = 'f7a6fbd6eb6a'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -57,7 +57,7 @@ def upgrade():
     op.create_index(op.f('ix_SYRESOURCETYPE_CREATEDATETIME'), 'SYRESOURCETYPE', ['CREATEDATETIME'], unique=False)
     op.create_index(op.f('ix_SYRESOURCETYPE_UPDATEDATETIME'), 'SYRESOURCETYPE', ['UPDATEDATETIME'], unique=False)
     op.create_table('SYROLE',
-    sa.Column('ID', sa.String(length=32), nullable=False),
+    sa.Column('ID', sa.String(length=36), nullable=False),
     sa.Column('CREATEDATETIME', sa.DateTime(), nullable=True),
     sa.Column('UPDATEDATETIME', sa.DateTime(), nullable=True),
     sa.Column('NAME', sa.String(length=100), nullable=True),
@@ -131,15 +131,6 @@ def upgrade():
     sa.Column('name', sa.String(length=100), nullable=False),
     sa.PrimaryKeyConstraint('id')
     )
-    op.create_table('preprocess',
-    sa.Column('id', sa.Integer(), autoincrement=True, nullable=False),
-    sa.Column('name', sa.String(length=100), nullable=False),
-    sa.Column('category', sa.Integer(), nullable=True),
-    sa.Column('filename', sa.String(length=255), nullable=False),
-    sa.Column('create_username', sa.String(length=100), nullable=False),
-    sa.Column('create_time', sa.DateTime(), nullable=True),
-    sa.PrimaryKeyConstraint('id')
-    )
     op.create_table('preprocess_method',
     sa.Column('id', sa.Integer(), autoincrement=True, nullable=False),
     sa.Column('name', sa.String(length=100), nullable=False),
@@ -172,8 +163,8 @@ def upgrade():
     op.create_index(op.f('ix_SYRESOURCE_CREATEDATETIME'), 'SYRESOURCE', ['CREATEDATETIME'], unique=False)
     op.create_index(op.f('ix_SYRESOURCE_UPDATEDATETIME'), 'SYRESOURCE', ['UPDATEDATETIME'], unique=False)
     op.create_table('SYROLE_SYORGANIZATION',
-    sa.Column('SYROLE_ID', sa.String(length=32), nullable=True),
-    sa.Column('SYORGANIZATION_ID', sa.String(length=32), nullable=True),
+    sa.Column('SYROLE_ID', sa.String(length=36), nullable=True),
+    sa.Column('SYORGANIZATION_ID', sa.String(length=36), nullable=True),
     sa.ForeignKeyConstraint(['SYORGANIZATION_ID'], ['SYORGANIZATION.ID'], ),
     sa.ForeignKeyConstraint(['SYROLE_ID'], ['SYROLE.ID'], )
     )
@@ -197,13 +188,13 @@ def upgrade():
     )
     op.create_table('SYUSER_SYORGANIZATION',
     sa.Column('SYUSER_ID', sa.String(length=36), nullable=True),
-    sa.Column('SYORGANIZATION_ID', sa.String(length=32), nullable=True),
+    sa.Column('SYORGANIZATION_ID', sa.String(length=36), nullable=True),
     sa.ForeignKeyConstraint(['SYORGANIZATION_ID'], ['SYORGANIZATION.ID'], ),
     sa.ForeignKeyConstraint(['SYUSER_ID'], ['SYUSER.ID'], )
     )
     op.create_table('SYUSER_SYROLE',
     sa.Column('SYUSER_ID', sa.String(length=36), nullable=True),
-    sa.Column('SYROLE_ID', sa.String(length=32), nullable=True),
+    sa.Column('SYROLE_ID', sa.String(length=36), nullable=True),
     sa.ForeignKeyConstraint(['SYROLE_ID'], ['SYROLE.ID'], ),
     sa.ForeignKeyConstraint(['SYUSER_ID'], ['SYUSER.ID'], )
     )
@@ -232,14 +223,14 @@ def upgrade():
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('SYORGANIZATION_SYRESOURCE',
-    sa.Column('SYRESOURCE_ID', sa.String(length=32), nullable=True),
-    sa.Column('SYORGANIZATION_ID', sa.String(length=32), nullable=True),
+    sa.Column('SYRESOURCE_ID', sa.String(length=36), nullable=True),
+    sa.Column('SYORGANIZATION_ID', sa.String(length=36), nullable=True),
     sa.ForeignKeyConstraint(['SYORGANIZATION_ID'], ['SYORGANIZATION.ID'], ),
     sa.ForeignKeyConstraint(['SYRESOURCE_ID'], ['SYRESOURCE.ID'], )
     )
     op.create_table('SYROLE_SYRESOURCE',
-    sa.Column('SYROLE_ID', sa.String(length=32), nullable=True),
-    sa.Column('SYRESOURCE_ID', sa.String(length=32), nullable=True),
+    sa.Column('SYROLE_ID', sa.String(length=36), nullable=True),
+    sa.Column('SYRESOURCE_ID', sa.String(length=36), nullable=True),
     sa.ForeignKeyConstraint(['SYRESOURCE_ID'], ['SYRESOURCE.ID'], ),
     sa.ForeignKeyConstraint(['SYROLE_ID'], ['SYROLE.ID'], )
     )
@@ -311,7 +302,6 @@ def downgrade():
     op.drop_index(op.f('ix_SYRESOURCE_CREATEDATETIME'), table_name='SYRESOURCE')
     op.drop_table('SYRESOURCE')
     op.drop_table('preprocess_method')
-    op.drop_table('preprocess')
     op.drop_table('netcat')
     op.drop_table('datasets')
     op.drop_index(op.f('ix_SYUSER_UPDATEDATETIME'), table_name='SYUSER')

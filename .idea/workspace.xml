@@ -4,13 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04ea07f5-d325-4ca5-9d86-cdad38921776" name="更改" comment="修改了项目依赖包">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="04ea07f5-d325-4ca5-9d86-cdad38921776" name="更改" comment="getRouter修改完成，能够返回roles">
+      <change afterPath="$PROJECT_DIR$/601/sydata_sql/sql执行顺序" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/543a8fee-76e4-4ed5-8907-cabf4fd085a7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/543a8fee-76e4-4ed5-8907-cabf4fd085a7.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/543a8fee-76e4-4ed5-8907-cabf4fd085a7/storage_v2/_src_/schema/data_model.VGYzYA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/543a8fee-76e4-4ed5-8907-cabf4fd085a7/storage_v2/_src_/schema/data_model.VGYzYA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/601/app/models/Network.py" beforeDir="false" afterPath="$PROJECT_DIR$/601/app/models/Network.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/601/app/models/Resource.py" beforeDir="false" afterPath="$PROJECT_DIR$/601/app/models/Resource.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/601/app/routes/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/601/app/routes/index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/601/app/routes/resource.py" beforeDir="false" afterPath="$PROJECT_DIR$/601/app/routes/resource.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/601/app/models/Organization.py" beforeDir="false" afterPath="$PROJECT_DIR$/601/app/models/Organization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/601/app/models/Role.py" beforeDir="false" afterPath="$PROJECT_DIR$/601/app/models/Role.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/601/app/models/User.py" beforeDir="false" afterPath="$PROJECT_DIR$/601/app/models/User.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/601/migrations/versions/d8f6d7ede193_initial_migration.py" beforeDir="false" afterPath="$PROJECT_DIR$/601/migrations/versions/f7a6fbd6eb6a_initial_migration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/601/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/601/start.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/601/sydata_sql/syrole_syresource_test.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/601/sydata_sql/syuser.sql" beforeDir="false" afterPath="$PROJECT_DIR$/601/sydata_sql/syuser.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/node_modules/.cache/babel-loader/47234189b62a2e2edd17841f76e16a1c.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/node_modules/.cache/babel-loader/47234189b62a2e2edd17841f76e16a1c.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/node_modules/.cache/vue-loader/0147624f95cbbd6211f5479ec864a2da.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/node_modules/.cache/vue-loader/0147624f95cbbd6211f5479ec864a2da.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/node_modules/.cache/vue-loader/94c60a2a755d465e73d029ffd360421a.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/node_modules/.cache/vue-loader/94c60a2a755d465e73d029ffd360421a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/node_modules/.cache/vue-loader/ef0c1d0999ca028f2120b5bc694584b6.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/node_modules/.cache/vue-loader/ef0c1d0999ca028f2120b5bc694584b6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/node_modules/.cache/vue-loader/f2f689751ce856d23e68dfe5efb84ac9.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/node_modules/.cache/vue-loader/f2f689751ce856d23e68dfe5efb84ac9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/vue.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +107,12 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.start">
+    <configuration name="appparams.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/601/sydata_sql/appparams.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="543a8fee-76e4-4ed5-8907-cabf4fd085a7" />
+      <method v="2" />
+    </configuration>
     <configuration name="authbase.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/601/authbase.sql" />
       <script-mode>FILE</script-mode>
@@ -108,26 +125,20 @@
       <data-source id="d20f7d5f-b225-477b-b92a-4975a0541b64" />
       <method v="2" />
     </configuration>
-    <configuration name="rankings.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/601/sydata_sql/rankings.sql" />
-      <script-mode>FILE</script-mode>
-      <data-source id="543a8fee-76e4-4ed5-8907-cabf4fd085a7" />
-      <method v="2" />
-    </configuration>
-    <configuration name="syresource.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/601/sydata_sql/syresource.sql" />
-      <script-mode>FILE</script-mode>
-      <data-source id="543a8fee-76e4-4ed5-8907-cabf4fd085a7" />
-      <method v="2" />
-    </configuration>
-    <configuration name="syrole_syresource.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/601/sydata_sql/syrole_syresource.sql" />
+    <configuration name="model_application.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/601/sydata_sql/model_application.sql" />
       <script-mode>FILE</script-mode>
       <data-source id="543a8fee-76e4-4ed5-8907-cabf4fd085a7" namespace="schema/&quot;data_model&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="syrole_syresource_test.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/601/sydata_sql/syrole_syresource_test.sql" />
+    <configuration name="preprocessed_dataset.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/601/sydata_sql/preprocessed_dataset.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="543a8fee-76e4-4ed5-8907-cabf4fd085a7" />
+      <method v="2" />
+    </configuration>
+    <configuration name="rankings.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/601/sydata_sql/rankings.sql" />
       <script-mode>FILE</script-mode>
       <data-source id="543a8fee-76e4-4ed5-8907-cabf4fd085a7" />
       <method v="2" />
@@ -157,10 +168,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.start" />
-        <item itemvalue="数据库脚本.syrole_syresource_test.sql" />
-        <item itemvalue="数据库脚本.syrole_syresource.sql" />
-        <item itemvalue="数据库脚本.syresource.sql" />
         <item itemvalue="数据库脚本.rankings.sql" />
+        <item itemvalue="数据库脚本.appparams.sql" />
+        <item itemvalue="数据库脚本.model_application.sql" />
+        <item itemvalue="数据库脚本.preprocessed_dataset.sql" />
       </list>
     </recent_temporary>
   </component>
@@ -194,7 +205,10 @@
       <workItem from="1729825289631" duration="598000" />
       <workItem from="1730095999413" duration="257000" />
       <workItem from="1730096315405" duration="28000" />
-      <workItem from="1730182973543" duration="5809000" />
+      <workItem from="1730182973543" duration="6562000" />
+      <workItem from="1730204812030" duration="846000" />
+      <workItem from="1730288704849" duration="3179000" />
+      <workItem from="1730292172661" duration="525000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <option name="closed" value="true" />
@@ -260,11 +274,42 @@
       <option name="project" value="LOCAL" />
       <updated>1729131977643</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="getRouter修改完成，能够返回roles">
+      <option name="closed" value="true" />
+      <created>1730189767621</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1730189767621</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -277,14 +322,15 @@
     <MESSAGE value="修改了数据库初始化方式，采用了分离版本，这样更清晰更方便改动，位置在sydata_sql里面，这是给开发者的，后面我出一个整体的给使用者" />
     <MESSAGE value="编写好修饰器：admin_required，并通过了测试，确实能够检测用户的角色，并进行认证拦截" />
     <MESSAGE value="修改了项目依赖包" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改了项目依赖包" />
+    <MESSAGE value="getRouter修改完成，能够返回roles" />
+    <option name="LAST_COMMIT_MESSAGE" value="getRouter修改完成，能够返回roles" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/data_model$test1.coverage" NAME="test1 覆盖结果" MODIFIED="1720576850790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/601/app/models" />
     <SUITE FILE_PATH="coverage/data_model$TrainModel.coverage" NAME="TrainModel 覆盖结果" MODIFIED="1720509425686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/601" />
-    <SUITE FILE_PATH="coverage/data_model$start.coverage" NAME="start 覆盖结果" MODIFIED="1730187267143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/601" />
+    <SUITE FILE_PATH="coverage/data_model$start.coverage" NAME="start 覆盖结果" MODIFIED="1730292220138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/601" />
     <SUITE FILE_PATH="coverage/data_model$run.coverage" NAME="run 覆盖结果" MODIFIED="1720509543565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/601" />
     <SUITE FILE_PATH="coverage/data_model$dl.coverage" NAME="dl 覆盖结果" MODIFIED="1720598679477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/601" />
-    <SUITE FILE_PATH="coverage/data_model$db_migrate.coverage" NAME="db_migrate 覆盖结果" MODIFIED="1728875448030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/601" />
+    <SUITE FILE_PATH="coverage/data_model$db_migrate.coverage" NAME="db_migrate 覆盖结果" MODIFIED="1730290166264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/601" />
   </component>
 </project>

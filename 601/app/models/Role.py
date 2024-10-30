@@ -5,16 +5,16 @@ from datetime import datetime
 
 #角色资源关联表
 role_resource_table = db.Table('SYROLE_SYRESOURCE', db.metadata,
-                               db.Column('SYROLE_ID', db.String(32), db.ForeignKey('SYROLE.ID')),
-                               db.Column('SYRESOURCE_ID', db.String(32), db.ForeignKey('SYRESOURCE.ID')))
+                               db.Column('SYROLE_ID', db.String(36), db.ForeignKey('SYROLE.ID')),
+                               db.Column('SYRESOURCE_ID', db.String(36), db.ForeignKey('SYRESOURCE.ID')))
 
 role_organization_table = db.Table('SYROLE_SYORGANIZATION', db.metadata,
-                               db.Column('SYROLE_ID', db.String(32), db.ForeignKey('SYROLE.ID')),
-                               db.Column('SYORGANIZATION_ID', db.String(32), db.ForeignKey('SYORGANIZATION.ID')))
+                               db.Column('SYROLE_ID', db.String(36), db.ForeignKey('SYROLE.ID')),
+                               db.Column('SYORGANIZATION_ID', db.String(36), db.ForeignKey('SYORGANIZATION.ID')))
 
 class Role(db.Model, UserMixin):
     __tablename__ = 'SYROLE'
-    ID = db.Column(db.String(32), primary_key=True)
+    ID = db.Column(db.String(36), primary_key=True)
     CREATEDATETIME = db.Column(db.DateTime, index=True, default=datetime.now)
     UPDATEDATETIME = db.Column(db.DateTime, index=True, default=datetime.now)
     NAME = db.Column(db.String(100))

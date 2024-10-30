@@ -8,11 +8,11 @@ def load_user(user_id):
 
 user_organization_table = db.Table('SYUSER_SYORGANIZATION', db.Model.metadata
                                    , db.Column('SYUSER_ID', db.String(36), db.ForeignKey('SYUSER.ID'))
-                                   , db.Column('SYORGANIZATION_ID', db.String(32), db.ForeignKey('SYORGANIZATION.ID')))
+                                   , db.Column('SYORGANIZATION_ID', db.String(36), db.ForeignKey('SYORGANIZATION.ID')))
 
 user_role_table = db.Table('SYUSER_SYROLE', db.Model.metadata
                            , db.Column('SYUSER_ID', db.String(36), db.ForeignKey('SYUSER.ID'))
-                           , db.Column('SYROLE_ID', db.String(32), db.ForeignKey('SYROLE.ID')))
+                           , db.Column('SYROLE_ID', db.String(36), db.ForeignKey('SYROLE.ID')))
 
 class User(db.Model, UserMixin):
     __tablename__ = 'SYUSER'
