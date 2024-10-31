@@ -15,7 +15,7 @@ def page_not_found(e):
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", debug=True)
+    app.run(host="127.0.0.1", debug=True)
 
 # D:/software/miniconda/envs/backend/python.exe -m flask --app start run  -p 5000 --debug
 

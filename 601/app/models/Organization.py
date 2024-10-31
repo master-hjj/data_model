@@ -3,8 +3,8 @@ from flask_login import UserMixin, AnonymousUserMixin
 from datetime import datetime
 
 organization_resource_table = db.Table('SYORGANIZATION_SYRESOURCE', db.metadata,
-                                       db.Column('SYRESOURCE_ID', db.String(32), db.ForeignKey('SYRESOURCE.ID')),
-                                       db.Column('SYORGANIZATION_ID', db.String(32), db.ForeignKey('SYORGANIZATION.ID')))
+                                       db.Column('SYRESOURCE_ID', db.String(36), db.ForeignKey('SYRESOURCE.ID')),
+                                       db.Column('SYORGANIZATION_ID', db.String(36), db.ForeignKey('SYORGANIZATION.ID')))
 
 
 class Organization(db.Model, UserMixin):
