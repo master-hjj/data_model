@@ -348,6 +348,22 @@ export default {
     this.getList();
   },
   methods: {
+
+    // 初始化表单
+    reset() {
+      this.form.menuCheckStrictly = true; // 默认开启父子联动
+      this.form.deptCheckStrictly = true; // 默认开启父子联动
+      // 其他初始化代码...
+    },
+    // 当用户勾选或取消勾选“父子联动”复选框时更新状态
+    handleCheckedTreeConnect(value, type) {
+      if (type == 'menu') {
+        this.form.menuCheckStrictly = value ? true : false;
+      } else if (type == 'dept') {
+        this.form.deptCheckStrictly = value ? true : false;
+      }
+    },
+
     /** 查询角色列表 */
     getList() {
       this.loading = true;
