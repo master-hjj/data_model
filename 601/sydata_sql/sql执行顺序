@@ -10,6 +10,8 @@ syonline.sql
 syuser_syrole.sql
 syuser_syorganization.sql
 sys_dict_data.sql
+
+
 syresource.sql（因为resource有自我依赖，所以要执行三次才能插入完成）
 syrole_syresource.sql
 
@@ -22,3 +24,6 @@ preprocessed_dataset.sql
 model_application.sql
 appparams.sql
 rankings.sql
+
+
+ps,在syresource.sql文件之前的所有文件可以按顺序批量执行，后面的也行，这样就快很多了。
