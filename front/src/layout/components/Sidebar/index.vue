@@ -45,14 +45,13 @@ export default {
                     // 递归过滤子菜单
                     if (filteredRoute.children) {
                         filteredRoute.children = filteredRoute.children.filter(child => {
-                            // 如果 meta.roles 为空或不存在，则所有角色可见；否则，仅 meta.roles 内的角色可见
-                            return !child.meta?.roles || child.meta.roles.length === 0 || child.meta.roles.some(role => userRoles.includes(role));
+                            // 如果 meta.roles 不为空，且包含用户角色，则显示该子菜单
+                            return child.meta?.roles && child.meta.roles.some(role => userRoles.includes(role));
                         });
                     }
 
                     // 判断父菜单项本身的可见性
-                    const isRouteVisible = !filteredRoute.meta?.roles || 
-                        filteredRoute.meta.roles.length === 0 || 
+                    const isRouteVisible = filteredRoute.meta?.roles && 
                         filteredRoute.meta.roles.some(role => userRoles.includes(role));
 
                     // 仅返回符合角色权限的路由和子路由
@@ -60,6 +59,7 @@ export default {
                 })
                 .filter(route => route !== null); // 清除无效路由
         },
+
 
 
         activeMenu() {
